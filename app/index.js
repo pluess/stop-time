@@ -24,6 +24,8 @@ app.get('/', function (req, res) {
 
 initIPAdress(); //Setup IP adress before app.listen()
 
+app.use(express.static('public'));
+
 app.listen(port, ipaddress, function() {
         console.log('%s: Node server started on %s:%d ...', Date(Date.now() ), ipaddress, port);
 });
