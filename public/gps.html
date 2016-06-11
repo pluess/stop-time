@@ -20,7 +20,8 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    x.innerHTML = "Position: " + JSON.stringify(position);
+	var d = new Date(position.timestamp);
+    x.innerHTML = "Gps Time: " + d.toJSON();
 }
 </script>
 
